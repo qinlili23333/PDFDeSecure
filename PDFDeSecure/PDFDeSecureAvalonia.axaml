@@ -11,7 +11,7 @@
   <StackPanel Margin="20" >
     <StackPanel  Orientation="Horizontal" VerticalAlignment="Center" Margin="4">
       <TextBlock VerticalAlignment="Center" Margin="4">Select PDF File </TextBlock>
-      <Button x:Name="btnbrowse" Margin="4">Browse</Button>
+      <Button x:Name="btnbrowse" Margin="4"  Click="BrowseFile">Browse</Button>
     </StackPanel>
     <StackPanel  Orientation="Horizontal" VerticalAlignment="Center" Margin="4">
       <TextBlock Margin="4">Selected PDF file:</TextBlock>
@@ -19,7 +19,7 @@
     </StackPanel>
     <ProgressBar x:Name="progressBar1" Value="0" HorizontalAlignment="Stretch" Margin="8"></ProgressBar>
     <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right" Margin="8">
-      <Button x:Name="btnunlock" FontSize="16" Padding="10"  Foreground="White" Background="DarkRed">Unlock PDF</Button>
+      <Button x:Name="btnunlock" FontSize="16" Padding="10"  Foreground="White" Background="DarkRed" IsEnabled="False" Click="SaveFile">Unlock PDF</Button>
     </StackPanel>
   </StackPanel>
 </Window>
