@@ -1,16 +1,12 @@
-using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Markup.Xaml;
-using PdfSharp.Pdf.IO;
-using PdfSharp.Pdf;
-using System.IO;
-using System;
 using Avalonia.Interactivity;
 using Avalonia.Platform.Storage;
-using System.Runtime.Intrinsics.Arm;
-using System.Threading.Tasks;
-using MsBox.Avalonia.Enums;
 using MsBox.Avalonia;
+using MsBox.Avalonia.Enums;
+using PdfSharp.Pdf;
+using PdfSharp.Pdf.IO;
+using System;
+using System.IO;
 
 namespace PDFDeSecure;
 
@@ -72,9 +68,9 @@ public partial class PDFDeSecureAvalonia : Window
         var file = await topLevel.StorageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
         {
             Title = "Save Unlocked PDF File",
-            DefaultExtension="pdf",
+            DefaultExtension = "pdf",
             FileTypeChoices = [FilePickerFileTypes.Pdf],
-            SuggestedFileName= pdffile.Text.Replace(".pdf","_unlock.pdf")
+            SuggestedFileName = pdffile.Text.Replace(".pdf", "_unlock.pdf")
         });
 
         if (file is not null)

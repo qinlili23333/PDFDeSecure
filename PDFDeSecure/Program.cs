@@ -65,7 +65,7 @@ namespace PDFDeSecure
             }
             else
             {
-                FreeConsole(); 
+                FreeConsole();
                 BuildAvaloniaApp().StartWithClassicDesktopLifetime(Args);
                 var Window = new PDFDeSecureAvalonia();
                 Window.Show();
