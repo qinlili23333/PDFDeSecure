@@ -1,11 +1,9 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/qoan7ibgh7vcd74r?svg=true)](https://ci.appveyor.com/project/abatsakidis/pdfdesecure)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/16a61ca3fda34415849d93e1f79e731d)](https://www.codacy.com/gh/abatsakidis/PDFDeSecure/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=abatsakidis/PDFDeSecure&amp;utm_campaign=Badge_Grade)
-
-[![Stargazers repo roster for @abatsakidis/PDFDeSecure](https://reporoster.com/stars/dark/abatsakidis/PDFDeSecure)](https://github.com/abatsakidis/PDFDeSecure/stargazers)
+[![Stargazers repo roster for @qinlili23333/PDFDeSecure](https://reporoster.com/stars/dark/qinlili23333/PDFDeSecure)](https://github.com/qinlili23333/PDFDeSecure/stargazers)
 
 ## Description ##
 
-An easy-to-use PDF Unlocker. Remove copy-protection from PDF files. 
+An easy-to-use PDF Unlocker. Remove copy-protection from PDF files.  
+Modernized on Avalonia with NativeAOT.  
 
 ## How To ##
 
@@ -18,16 +16,21 @@ An easy-to-use PDF Unlocker. Remove copy-protection from PDF files.
 
 ## Tested on ##
 
-**OS**: Windows 10 x86_64 <br>
-**CPU**: Intel 2 Quad Q6600 (4) @ 2.400GHz <br>
-**Memory**: 4085MiB <br>
+**OS**: Windows 11 x86_64   
+**CPU**: Intel Core i9-13980HX @ 5.8GHz   
+**Memory**: 32767MiB   
 
 ## Build ##
 
-* Use Visual Studio 2017<br>
-* Open application's solution file (PDFDeSecure.sln)<br>
+* Use Visual Studio 2022  
+* Open application's solution file (PDFDeSecure.sln)  
 
 ## Author ##
-
-Batsakidis Athanasios<br>
+Origin: 
+Batsakidis Athanasios  
 a.batsakidis@re-think.gr
+
+Modernized:  
+QINLILI  
+
+
