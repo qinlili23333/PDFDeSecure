@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="190"
+        x:Class="PDFDeSecure.PDFDeSecureAvalonia"
+        Title="PDFDeSecure"
+        CanResize="False"
+        Width="600"
+        Height="190">
+  <StackPanel Margin="20" >
+    <StackPanel  Orientation="Horizontal" VerticalAlignment="Center" Margin="4">
+      <TextBlock VerticalAlignment="Center" Margin="4">Select PDF File </TextBlock>
+      <Button x:Name="btnbrowse" Margin="4">Browse</Button>
+    </StackPanel>
+    <StackPanel  Orientation="Horizontal" VerticalAlignment="Center" Margin="4">
+      <TextBlock Margin="4">Selected PDF file:</TextBlock>
+      <TextBlock x:Name="pdffile" Margin="4"></TextBlock>
+    </StackPanel>
+    <ProgressBar x:Name="progressBar1" Value="0" HorizontalAlignment="Stretch" Margin="8"></ProgressBar>
+    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right" Margin="8">
+      <Button x:Name="btnunlock" FontSize="16" Padding="10"  Foreground="White" Background="DarkRed">Unlock PDF</Button>
+    </StackPanel>
+  </StackPanel>
+</Window>

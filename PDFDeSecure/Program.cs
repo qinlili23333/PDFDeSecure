@@ -1,14 +1,19 @@
-﻿using PdfSharp.Pdf;
+﻿using Avalonia;
+using PdfSharp.Pdf;
 using PdfSharp.Pdf.IO;
 using System;
 using System.IO;
 using System.Runtime.InteropServices;
-using System.Windows.Forms;
 
 namespace PDFDeSecure
 {
     static class Program
     {
+
+        public static AppBuilder BuildAvaloniaApp()
+            => AppBuilder.Configure<App>()
+                .UsePlatformDetect();
+
         [DllImport("kernel32.dll", SetLastError = true)]
         private static extern int FreeConsole();
         /// <summary>
@@ -17,7 +22,6 @@ namespace PDFDeSecure
         [STAThread]
         static void Main()
         {
-            Application.SetHighDpiMode(HighDpiMode.PerMonitorV2);
             var Args = Environment.GetCommandLineArgs();
             if (Args.Length > 2)
             {
@@ -61,10 +65,10 @@ namespace PDFDeSecure
             }
             else
             {
-                FreeConsole();
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new PDFDeSecure());
+                FreeConsole(); 
+                BuildAvaloniaApp().StartWithClassicDesktopLifetime(Args);
+                var Window = new PDFDeSecureAvalonia();
+                Window.Show();
             }
         }
     }
