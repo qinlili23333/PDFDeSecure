@@ -7,6 +7,7 @@ using PdfSharp.Pdf;
 using PdfSharp.Pdf.IO;
 using System;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace PDFDeSecure;
 
@@ -23,8 +24,6 @@ public partial class PDFDeSecureAvalonia : Window
     public async void BrowseFile(object sender, RoutedEventArgs args)
     {
         var topLevel = TopLevel.GetTopLevel(this);
-
-        // Start async operation to open the dialog.
         var files = await topLevel.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
         {
             Title = "Select PDF File",
@@ -44,15 +43,18 @@ public partial class PDFDeSecureAvalonia : Window
             outpdf?.Dispose();
             outpdf = new PdfDocument();
             Stream fileStream = await files[0].OpenReadAsync();
-            pdf = PdfReader.Open(fileStream, PdfDocumentOpenMode.Import);
-            int current = 0;
-            foreach (PdfPage page in pdf.Pages)
+            await Task.Run(() =>
             {
-                outpdf.AddPage(page);
-                current++;
-                IProgress<int> iprog = progress;
-                iprog.Report(current * 100 / pdf.PageCount);
-            }
+                pdf = PdfReader.Open(fileStream, PdfDocumentOpenMode.Import);
+                int current = 0;
+                foreach (PdfPage page in pdf.Pages)
+                {
+                    outpdf.AddPage(page);
+                    current++;
+                    IProgress<int> iprog = progress;
+                    iprog.Report(current * 100 / pdf.PageCount);
+                }
+            });
             fileStream.Close();
             btnunlock.IsEnabled = true;
             btnbrowse.IsEnabled = true;
@@ -63,8 +65,6 @@ public partial class PDFDeSecureAvalonia : Window
     public async void SaveFile(object sender, RoutedEventArgs args)
     {
         var topLevel = TopLevel.GetTopLevel(this);
-
-        // Start async operation to open the dialog.
         var file = await topLevel.StorageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
         {
             Title = "Save Unlocked PDF File",
@@ -77,7 +77,12 @@ public partial class PDFDeSecureAvalonia : Window
         {
             btnunlock.Content = "Saving...";
             btnunlock.IsEnabled = false;
-            outpdf.Save(await file.OpenWriteAsync(), true);
+            Stream stream = await file.OpenWriteAsync();
+            await Task.Run(() =>
+            {
+                outpdf.Save(stream, true);
+            });
+            stream.Close();
             outpdf.Dispose();
             pdf.Dispose();
             await MessageBoxManager.GetMessageBoxStandard("Unlocked & Saved", "PDF file Unlocked! and Saved!", ButtonEnum.Ok).ShowAsync();
