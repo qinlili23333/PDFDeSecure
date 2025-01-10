@@ -18,6 +18,7 @@
     <NoWin32Manifest>true</NoWin32Manifest>
     <Authors>琴梨梨OvO</Authors>
     <AvaloniaUseCompiledBindingsByDefault>True</AvaloniaUseCompiledBindingsByDefault>
+    <ApplicationIcon>Gemini_Generated_Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <DebugType>full</DebugType>
@@ -29,6 +30,9 @@
     <PublishTrimmed>True</PublishTrimmed>
     <PublishAot>True</PublishAot>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Gemini_Generated_Icon.ico" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="11.2.3" />
     <PackageReference Include="Avalonia.Desktop" Version="11.2.3" />
