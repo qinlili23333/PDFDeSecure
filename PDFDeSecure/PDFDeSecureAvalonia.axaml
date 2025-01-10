@@ -4,7 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="190"
         x:Class="PDFDeSecure.PDFDeSecureAvalonia"
-        Title="PDFDeSecure"
+        Title="PDFDeSecure Avalonia"
         CanResize="False"
         Width="600"
         Height="190">
