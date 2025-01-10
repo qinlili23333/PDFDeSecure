@@ -8,13 +8,13 @@
   IgnorableNamespaces="uap rescap uap18">
 
   <Identity
-    Name="6ee57aea-b235-40d8-b615-dddc60c286c0"
-    Publisher="CN=QINLILI"
+    Name="61595QINLILITECH.PDFDeSecureAvalonia"
+    Publisher="CN=C9DCE025-8575-4685-9AB7-EC5D7670941B"
     Version="1.0.0.0" />
 
   <Properties>
     <DisplayName>PDFDeSecure Avalonia</DisplayName>
-    <PublisherDisplayName>QINLILI</PublisherDisplayName>
+    <PublisherDisplayName>QINLILI TECH</PublisherDisplayName>
     <Logo>Images\StoreLogo.png</Logo>
   </Properties>
 

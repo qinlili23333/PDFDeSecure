@@ -4,6 +4,7 @@
 
 An easy-to-use PDF Unlocker. Remove copy-protection from PDF files.  
 Modernized on Avalonia with NativeAOT.  
+Icon generated with Gemini.  
 
 ## How To ##
 
