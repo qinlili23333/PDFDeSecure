@@ -1,4 +1,4 @@
-[![Stargazers repo roster for @qinlili23333/PDFDeSecure](https://reporoster.com/stars/dark/qinlili23333/PDFDeSecure)](https://github.com/qinlili23333/PDFDeSecure/stargazers)
+[![](https://get.microsoft.com/images/en-au%20dark.svg)](https://apps.microsoft.com/detail/9N1DK3VD4RV8?mode=direct)  
 
 ## Description ##
 
@@ -11,7 +11,7 @@ Icon generated with Gemini.
 * Select your PDF Protected File (Browse).
 * Click 'Unlock' button and Save the Un-Protected PDF File. 
 
-![Alt text](/Screenshot/screen.jpg?raw=true "MD5 Bruter")
+![Alt text](Screenshot/screen.png "MD5 Bruter")
 
 <br>
 
