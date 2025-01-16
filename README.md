@@ -1,4 +1,4 @@
-[![](https://get.microsoft.com/images/en-au%20dark.svg)](https://apps.microsoft.com/detail/9N1DK3VD4RV8?mode=direct)  
+[![](https://get.microsoft.com/images/en-us%20dark.svg)](https://apps.microsoft.com/detail/9N1DK3VD4RV8?mode=direct)  
 
 ## Description ##
 
