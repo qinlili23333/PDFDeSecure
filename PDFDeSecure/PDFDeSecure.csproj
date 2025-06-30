@@ -34,12 +34,12 @@
     <Content Include="Gemini_Generated_Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="11.2.3" />
-    <PackageReference Include="Avalonia.Desktop" Version="11.2.3" />
-    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.3" />
+    <PackageReference Include="Avalonia" Version="11.3.2" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.2" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.2" />
     <PackageReference Include="MessageBox.Avalonia" Version="3.2.0" />
     <PackageReference Include="PDFsharp">
-      <Version>6.2.0-preview-2</Version>
+      <Version>6.2.0</Version>
     </PackageReference>
   </ItemGroup>
 </Project>
