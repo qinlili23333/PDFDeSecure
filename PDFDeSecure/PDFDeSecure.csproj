@@ -1,12 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net9.0-windows7.0</TargetFramework>
+    <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
     <OutputType>Exe</OutputType>
     <PlatformName>windows</PlatformName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWindowsForms>False</UseWindowsForms>
     <Configurations>Debug;Release</Configurations>
-    <Platforms>x64</Platforms>
+    <Platforms>x64;ARM64;x86</Platforms>
+		<Version>1.1.0.0</Version>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>PDFDeSecure.Program</StartupObject>
@@ -19,8 +20,19 @@
     <Authors>琴梨梨OvO</Authors>
     <AvaloniaUseCompiledBindingsByDefault>True</AvaloniaUseCompiledBindingsByDefault>
     <ApplicationIcon>Gemini_Generated_Icon.ico</ApplicationIcon>
+    <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebugType>full</DebugType>
+    <PublishTrimmed>False</PublishTrimmed>
+    <PublishAot>False</PublishAot>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <DebugType>full</DebugType>
+    <PublishTrimmed>False</PublishTrimmed>
+    <PublishAot>False</PublishAot>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <DebugType>full</DebugType>
     <PublishTrimmed>False</PublishTrimmed>
     <PublishAot>False</PublishAot>
@@ -30,16 +42,26 @@
     <PublishTrimmed>True</PublishTrimmed>
     <PublishAot>True</PublishAot>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <DebugType>none</DebugType>
+    <PublishTrimmed>True</PublishTrimmed>
+    <PublishAot>True</PublishAot>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <DebugType>none</DebugType>
+    <PublishTrimmed>True</PublishTrimmed>
+    <PublishAot>True</PublishAot>
+  </PropertyGroup>
   <ItemGroup>
     <Content Include="Gemini_Generated_Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="11.3.13" />
-    <PackageReference Include="Avalonia.Desktop" Version="11.3.13" />
-    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.10" />
-    <PackageReference Include="MessageBox.Avalonia" Version="3.3.1.1" />
+    <PackageReference Include="Avalonia" Version="12.0.2" />
+    <PackageReference Include="Avalonia.Desktop" Version="12.0.2" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="12.0.2" />
+    <PackageReference Include="MessageBox.Avalonia" Version="12.0.0" />
     <PackageReference Include="PDFsharp">
-      <Version>6.2.4</Version>
+      <Version>7.0.0-preview-1</Version>
     </PackageReference>
   </ItemGroup>
 </Project>
